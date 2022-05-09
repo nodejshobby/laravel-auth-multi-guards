@@ -19,3 +19,22 @@ DB_PASSWORD=
 ## Then start the development 
 
 `php artisan serve`
+
+
+## Finally head over to 
+
+http://localhost:8000/login 
+
+### To seed the system with admin use
+
+`php artisan tinker`
+
+### Then enter these commands to the tinker prompt
+
+```
+use App\Model\Admin
+Admin::create(['name' => "Admin", 'email' => "admin@gmail.com", 'password' => Hash::make('Admin')])
+```
+### You can then head over to admin login url
+http://localhost:8000/admin/login
+
